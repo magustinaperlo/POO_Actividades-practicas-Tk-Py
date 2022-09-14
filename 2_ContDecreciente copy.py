@@ -2,7 +2,7 @@ import tkinter as tk
 
 ventana = tk.Tk()
 ventana.geometry("300x200")
-ventana.title("ContCreciente.py")
+ventana.title("ContDecreciente.py")
 
 frameCont = tk.Frame(ventana)
 frameCont.place(relx= 0.5, rely=0.5, anchor=tk.CENTER)
@@ -15,11 +15,11 @@ etiquetaCont.grid(row=0, column=1)
 
 def contador():
     num=int(etiquetaCont.cget("text"))
-    num += 1
+    num -= 1
     etiquetaCont["text"] = num
     return num
 
-botonCont = tk.Button(frameCont, text="+", command = contador)
+botonCont = tk.Button(frameCont, text="-", command = contador)
 botonCont.grid(row=0, column=2)
 
 ventana.mainloop()
