@@ -1,15 +1,20 @@
-from tkinter import *
-root = Tk()
-root.counter = 0
+import tkinter as tk
 
-def clicked():
-    root.counter += 1
-    L['text'] = 'Contador: ' + str(root.counter)
-        
-b = Button(root, text="+1", command=clicked)
-b.pack()
+ventana = tk.Tk()
+ventana.geometry("300x200")
+ventana.title("ContCreciente.py")
+num = 0
 
-L = Label(root, text="Contador: 0")
-L.pack()
+etiquetaCont = tk.Label(ventana, text=num)
+etiquetaCont.pack()
 
-root.mainloop()
+def contador():
+    num=int(etiquetaCont.cget("text"))
+    num += 1
+    etiquetaCont["text"] = num
+    return num
+
+botonCont = tk.Button(ventana, text="+1", command = contador)
+botonCont.pack()
+
+ventana.mainloop()
