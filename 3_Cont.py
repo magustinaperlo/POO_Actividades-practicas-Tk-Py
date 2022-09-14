@@ -14,15 +14,12 @@ def factorial():
     # return numF, numN
 
 
-
-
-
-
 ventana = Tk()
 ventana.geometry("600x200")
 ventana.title("Factorial")
 ventana.config(bg="grey")
 
+#al estar readonly lineedit1 y 2, se debe usar StringVar.
 txt1 =  StringVar()
 txt2 =  StringVar()
 txt1.set(1)
