@@ -5,6 +5,12 @@ ventana = Tk()
 ventana.geometry("300x200")
 ventana.title("ContDecreciente.py")
 
+#Funcion de contador
+def contador():
+    num=int(etiquetaCont.get())
+    num -= 1
+    txtvar.set(num)
+
 txtvar=StringVar()
 txtvar.set(88)
 
@@ -22,11 +28,7 @@ etiquetaNom.grid(row=0, column=0)
 etiquetaCont = Entry(frameCont, textvariable=txtvar)
 etiquetaCont.grid(row=0, column=1)
 
-#Funcion de contador
-def contador():
-    num=int(etiquetaCont.get())
-    num -= 1
-    txtvar.set(num)
+
 
 #Boton Contador
 botonCont = Button(frameCont, text="-", command = contador)

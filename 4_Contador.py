@@ -5,8 +5,8 @@ ventana.geometry("600x200")
 ventana.title("Contador")
 ventana.config(bg="grey")
 
-txtvar = StringVar()
-txtvar.set(0)
+campoNum = StringVar()
+campoNum.set(0)
 
 #Frame centrado, ubicaremos todos los elementos aqui.
 frameCont = Frame(ventana)
@@ -17,7 +17,7 @@ textoContador = Label(frameCont, text="Contador")
 textoContador.grid(row=0, column=0)
 
 #Campo de numeros
-campo = Entry (frameCont)
+campo = Entry (frameCont, textvariable=campoNum)
 campo.grid(row=0, column=1)
 
 #Boton 1
