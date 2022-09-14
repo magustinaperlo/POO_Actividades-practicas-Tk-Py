@@ -1,15 +1,20 @@
 import tkinter as tk
 
+#Ventana Principal
 ventana = tk.Tk()
 ventana.geometry("300x200")
 ventana.title("ContCreciente.py")
 
+#Frame, donde insertaremos todos los elementos.
 frameCont = tk.Frame(ventana)
 frameCont.place(relx= 0.5, rely=0.5, anchor=tk.CENTER)
 num = 0
 
+#Etiqueta "Contador"
 etiquetaNom = tk.Label(frameCont, text="Contador")
 etiquetaNom.grid(row=0, column=0)
+
+#Etiqueta
 etiquetaCont = tk.Label(frameCont, text=num)
 etiquetaCont.grid(row=0, column=1)
 
