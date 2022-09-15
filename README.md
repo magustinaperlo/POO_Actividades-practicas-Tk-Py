@@ -3,6 +3,7 @@
 <img src="https://img.shields.io/badge/Exercise-%F0%9F%93%9A-green" alt="Exercise">
 <img src="https://img.shields.io/badge/Python-%F0%9F%90%8D-blue" alt="Python">
 <img src="https://img.shields.io/badge/Status-WIP-yellow" alt="Status, Work in Progress">
+<img src="https://img.shields.io/badge/Score-WIP-red" alt="Score: Work in Progress">
 </p>
   
                    
