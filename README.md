@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/Python-%F0%9F%90%8D-blue)
+<Center> ![Python](https://img.shields.io/badge/Python-%F0%9F%90%8D-blue) </Center>
 # Actividades Practicas Tk+Py
 
 
