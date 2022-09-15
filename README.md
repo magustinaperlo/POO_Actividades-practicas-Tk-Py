@@ -1,4 +1,13 @@
-<Center> ![Python](https://img.shields.io/badge/Python-%F0%9F%90%8D-blue) </Center>
+<p align="center"> 
+<img src="https://img.shields.io/badge/Subject-Programming%20ii-yellowgreen" alt="Programming 2"> 
+<img src="https://img.shields.io/badge/Exercise-%F0%9F%93%9A-green" alt="Exercise">
+<img src="https://img.shields.io/badge/Python-%F0%9F%90%8D-blue" alt="Python">
+<img src="https://img.shields.io/badge/Status-WIP-yellow" alt="Status, Work in Progress">
+</p>
+  
+                   
+     
+
 # Actividades Practicas Tk+Py
 
 
