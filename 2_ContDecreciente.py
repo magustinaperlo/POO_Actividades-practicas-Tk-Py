@@ -3,32 +3,32 @@ from tkinter import *
 #Ventana Principal
 ventana = Tk()
 ventana.geometry("300x200")
-ventana.title("ContDecreciente.py")
+ventana.title("ContDecreciente")
+ventana.config(bg="lightgrey")
 
-#Funcion de contador
+
+#Funcion de contador -1
 def contador():
     num=int(etiquetaCont.get())
     num -= 1
     txtvar.set(num)
 
+#Convertimos variable a StringVar para usar en Entry, textvariable.
 txtvar=StringVar()
-txtvar.set(88)
+txtvar.set(88) # <- Seteamos a 88 el contador
 
 
-#Frame, donde insertaremos todos los elementos.
+#Frame, donde insertaremos todos los widgets.
 frameCont = Frame(ventana)
-frameCont.place(relx= 0.5, rely=0.5, anchor=CENTER)
-num = 0
+frameCont.place(relx= 0.5, rely=0.5, anchor=CENTER) #Centramos y anclamos al centro
 
 #Etiqueta "Contador"
 etiquetaNom = Label(frameCont, text="Contador")
 etiquetaNom.grid(row=0, column=0)
 
-#Etiqueta numero
-etiquetaCont = Entry(frameCont, textvariable=txtvar)
+#Campo de numero, no editable.
+etiquetaCont = Entry(frameCont, state="readonly", textvariable=txtvar)
 etiquetaCont.grid(row=0, column=1)
-
-
 
 #Boton Contador
 botonCont = Button(frameCont, text="-", command = contador)
