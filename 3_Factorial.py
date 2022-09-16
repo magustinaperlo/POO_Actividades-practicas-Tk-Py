@@ -45,5 +45,5 @@ lineEdit2.grid(row=0, column=3)
 buttonSiguiente = Button(frameFact, text="Siguiente", command=factorial)
 buttonSiguiente.grid(row=0, column=4)
 
-
+ventana.resizable(False,False)
 ventana.mainloop()

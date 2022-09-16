@@ -51,4 +51,6 @@ reset = Button(frameCont, text="Reset", command=Freset)
 reset.grid(row=0, column=4)
 
 
+
+ventana.resizable(False,False)
 ventana.mainloop()
