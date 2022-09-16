@@ -1,4 +1,3 @@
-from calendar import c
 from tkinter import *
 
 #Ventana
