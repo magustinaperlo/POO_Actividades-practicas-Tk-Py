@@ -9,6 +9,7 @@ frameCalc = Frame(ventana)
 frameCalc.pack()
 
 
+
 #Textos
 num1text=Label(frameCalc, text="Primer numero")
 num1text.grid(row=0, column=0)
@@ -48,5 +49,5 @@ mod.grid(row=6, column=0)
 clear = Button(frameCalc, text="CLEAR")
 clear.grid(row=6, column=1)
 
-
+ventana.resizable(False,False)
 ventana.mainloop()

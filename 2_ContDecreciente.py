@@ -34,4 +34,5 @@ etiquetaCont.grid(row=0, column=1)
 botonCont = Button(frameCont, text="-", command = contador)
 botonCont.grid(row=0, column=2)
 
+ventana.resizable(False,False)
 ventana.mainloop()
