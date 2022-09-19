@@ -18,6 +18,10 @@ def numRandom():
 
 numResultado = StringVar()
 numResultado.set("")
+num1start = IntVar()
+num1start.set(0)
+num2start = IntVar()
+num2start.set(0)
 
 #Se crea y ubica frame
 frameGen = Frame(ventana)
@@ -32,9 +36,9 @@ txtNumGen = Label(frameGen, text="Número Generado")
 txtNumGen.grid(row=2,column=0)
 
 #Caja de numeros y resultado
-formNum1 = Spinbox(frameGen, from_= 0 ,to=999)  
+formNum1 = Spinbox(frameGen, from_=-999 ,to=999, textvariable=num1start)  
 formNum1.grid(row=0,column=1)
-formNum2 = Spinbox(frameGen, from_= 0 ,to= 999) 
+formNum2 = Spinbox(frameGen, from_=-999 ,to= 999,  textvariable=num2start) 
 formNum2.grid(row=1,column=1)
 formNumResultado = Entry(frameGen, state="readonly", textvariable=numResultado) 
 formNumResultado.grid(row=2,column=1)
