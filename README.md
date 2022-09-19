@@ -9,7 +9,7 @@
                    
      
 
-# Actividades Practicas Tk+Py
+# Actividades Practicas Tk+Py - Suarez, Juan Pablo
 
 
 
