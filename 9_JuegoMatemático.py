@@ -1,7 +1,7 @@
 from tkinter import *
 #Ventana principal
 main = Tk()
-main.geometry("500x200")
+main.geometry("600x300")
 
 #Frame
 juegoFr= Frame(main)
