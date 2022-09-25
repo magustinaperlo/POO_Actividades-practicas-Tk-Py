@@ -15,29 +15,32 @@ radioOption = IntVar()
 txtenResultado=StringVar()
 txtenResultado.set("")
 
+  
 
 #Funciones
+# se modifica el tipo de la variable porque no permite ingreso de valores decimales
 def sumaF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
+    a = float(enValor1.get())
+    b = float(enValor2.get())
     c = a + b
     txtenResultado.set(c)
 def restaF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
+    a = float(enValor1.get())
+    b = float(enValor2.get())
     c = a-b
     txtenResultado.set(c)
 def productoF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
+    a = float(enValor1.get())
+    b = float(enValor2.get())
     c = a*b
     txtenResultado.set(c)
 def divisionF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
+    a = float(enValor1.get())
+    b = float(enValor2.get())
     if b == 0:
-        msg="ERROR. Division por 0"
-        txtenResultado.set(msg)
+        # msg="ERROR. Division por 0"
+        # txtenResultado.set(msg)
+        messagebox.showinfo(message="No es posible dividir por cero", title="Error")
     else:
         c = a/b
         txtenResultado.set(c)
@@ -55,6 +58,7 @@ def OperacionesCalc():
         divisionF()
     else:
         messagebox.showwarning("Error","Seleccione una operacion.")
+
 
 
 #Etiquetas
