@@ -17,29 +17,62 @@ txtenResultado.set("")
 
 
 #Funciones
+
+def isfloat(num):
+    try:
+        float(num)
+        return True
+    except ValueError:
+        return False
+
+def validacion():
+    a = enValor1.get()
+    b = enValor2.get()
+    if (a.isnumeric() or isfloat(a)) and (b.isnumeric() or isfloat(a)):
+        pass 
+    else:
+        messagebox.showerror(title="ERROR CARACTER", message="Ha ingresado un caracter incorrecto")
+def validacion2(a, b):
+    if a.isnumeric():
+        a =int(a)
+    else:
+        a=float(a)
+    if b.isnumeric():
+        b=int(b)
+    else:
+        b=float(b)
+    return a , b
 def sumaF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
-    c = a + b
+    x= enValor1.get()
+    y= enValor2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x+y
     txtenResultado.set(c)
 def restaF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
-    c = a-b
+    x= enValor1.get()
+    y= enValor2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x-y
     txtenResultado.set(c)
 def productoF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
-    c = a*b
+    x= enValor1.get()
+    y= enValor2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x*y
     txtenResultado.set(c)
 def divisionF():
-    a = int(enValor1.get())
-    b = int(enValor2.get())
-    if b == 0:
-        msg="ERROR. Division por 0"
+    x= enValor1.get()
+    y= enValor2.get()
+    validacion()
+    x,y = validacion2(x, y) 
+    if y == 0:
+        msg="No se puede dividir por 0."
         txtenResultado.set(msg)
     else:
-        c = a/b
+        c = x/y
         txtenResultado.set(c)
 
 
