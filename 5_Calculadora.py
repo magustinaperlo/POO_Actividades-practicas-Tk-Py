@@ -1,4 +1,13 @@
 from tkinter import *
+from tkinter import messagebox
+
+def isfloat(num):
+    try:
+        float(num)
+        return True
+    except ValueError:
+        return False
+
 
 #Ventana
 ventana = Tk()
@@ -6,35 +15,61 @@ ventana.geometry("300x200")
 ventana.title("Calculadora")
 
 #Funciones
-
+def validacion():
+    a = num1.get()
+    b = num2.get()
+    if (a.isnumeric() or isfloat(a)) and (b.isnumeric() or isfloat(a)):
+        pass 
+    else:
+        messagebox.showerror(title="ERROR CARACTER", message="Ha ingresado un caracter incorrecto")
+def validacion2(a, b):
+    if a.isnumeric():
+        a =int(a)
+    else:
+        a=float(a)
+    if b.isnumeric():
+        b=int(b)
+    else:
+        b=float(b)
+    return a , b
 def sumaF():
-    a = int(num1.get())
-    b = int(num2.get())
-    c = a + b
+    x= num1.get()
+    y= num2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x+y
     numResultadovar.set(c)
 def restaF():
-    a = int(num1.get())
-    b = int(num2.get())
-    c = a-b
+    x= num1.get()
+    y= num2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x-y
     numResultadovar.set(c)
 def productoF():
-    a = int(num1.get())
-    b = int(num2.get())
-    c = a*b
+    x= num1.get()
+    y= num2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x*y
     numResultadovar.set(c)
 def divisionF():
-    a = int(num1.get())
-    b = int(num2.get())
-    if b == 0:
+    x= num1.get()
+    y= num2.get()
+    validacion()
+    x,y = validacion2(x, y) 
+    if y == 0:
         msg="No se puede dividir por 0."
         numResultadovar.set(msg)
     else:
-        c = a/b
+        c = x/y
         numResultadovar.set(c)
 def modF():
-    a = int(num1.get())
-    b = int(num2.get())
-    c = a%b
+    x= num1.get()
+    y= num2.get()
+    validacion()
+    x,y = validacion2(x, y)
+    c = x%y
     numResultadovar.set(c)
 def clearF():
     num1var.set("")

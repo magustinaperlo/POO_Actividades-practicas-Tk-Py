@@ -1,4 +1,3 @@
-from curses.ascii import isspace
 from tkinter import *
 from tkinter import messagebox
 
